@@ -1,47 +1,45 @@
-DevMatch v2 – Developer Profile Management API
+# 🚀 DevMatch v2 – Developer Profile Management API
 
-DevMatch v2 is a RESTful backend API designed to manage developer profiles with secure user authentication and protected access to resources.
+DevMatch v2 is a secure, scalable RESTful backend API built to manage developer profiles with robust authentication and protected resource access.
 
 The application enables users to register, authenticate, create and manage their developer profiles, and discover other developers through skill-based information stored in a MongoDB database.
 
-This project demonstrates backend application development using modern API design principles, JWT-based authentication, and NoSQL database integration.
+This project demonstrates real-world backend development using modern API design principles, JWT-based authentication, and NoSQL database integration.
 
-Key Features
+---
 
-User Registration and Authentication
+## ✨ Key Features
 
-Secure Password Hashing using Bcrypt
+✔️ User Registration and Login
+✔️ Secure Password Hashing using Bcrypt
+✔️ JWT-based Authentication & Authorization
+✔️ Protected API Routes
+✔️ Create Developer Profiles
+✔️ View All Developer Profiles
+✔️ One-to-One Mapping between Users and Developer Profiles
+✔️ MongoDB Integration for Persistent Data Storage
+✔️ Interactive Swagger API Documentation
 
-JWT-based Authorization
+---
 
-Protected API Routes
+## 🛠️ Technology Stack
 
-Create and Update Developer Profiles
+| Technology | Purpose                   |
+| ---------- | ------------------------- |
+| Python     | Core Programming Language |
+| FastAPI    | Backend API Framework     |
+| MongoDB    | NoSQL Database            |
+| PyMongo    | Database Connector        |
+| JWT        | Authentication            |
+| Bcrypt     | Password Hashing          |
+| Uvicorn    | ASGI Server               |
 
-View Developer Profiles
+---
 
-One-to-One Mapping between User Accounts and Developer Profiles
+## 📁 Project Structure
 
-MongoDB Integration for Persistent Data Storage
-
-Technology Stack
-
-Python
-
-FastAPI
-
-MongoDB
-
-PyMongo
-
-JSON Web Tokens (JWT)
-
-Bcrypt
-
-Uvicorn
-
-Project Structure
 devmatchv2/
+
 │
 ├── app/
 │   ├── core/
@@ -62,69 +60,99 @@ devmatchv2/
 ├── .env
 ├── requirements.txt
 └── README.md
-Installation & Setup
-1. Clone the Repository
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
 git clone https://github.com/YOUR_USERNAME/devmatchv2.git
 cd devmatchv2
-2. Create a Virtual Environment
+
+---
+
+### 2️⃣ Create Virtual Environment
+
 python -m venv venv
 source venv/bin/activate
-3. Install Dependencies
-pip install -r requirements.txt
-4. Configure Environment Variables
 
-Create a .env file in the root directory:
+---
+
+### 3️⃣ Install Dependencies
+
+pip install -r requirements.txt
+
+---
+
+### 4️⃣ Configure Environment Variables
+
+Create a `.env` file in the root directory:
 
 MONGO_URI=mongodb://localhost:27017
 DATABASE_NAME=devmatch
 SECRET_KEY=your_secret_key
 ALGORITHM=HS256
-5. Run the Application
+
+---
+
+### 5️⃣ Run the Application
+
 uvicorn app.main:app --reload
 
-Access interactive API documentation at:
+---
+
+## 📌 Access API Documentation
+
+After running the server, open:
 
 http://127.0.0.1:8000/docs
-Authentication Workflow
 
-Register a new user via /signup
+Swagger UI provides an interactive interface to test all API endpoints.
 
-Log in using /login
+---
 
-Obtain JWT access token
+## 🔐 Authentication Workflow
 
-Authorize API requests using:
+1. Register a new user via `/signup`
+2. Login using `/login`
+3. Obtain JWT Access Token
+4. Authorize API Requests using:
 
 Bearer <access_token>
 
-Access protected endpoints such as:
+5. Access Protected Endpoints:
 
-/create-profile
+• `/create-profile`
+• `/developers`
 
-/developers
+---
 
-Database Schema
-Users Collection
+## 🗄️ Database Schema
 
-email
+### Users Collection
 
-password (hashed)
+• email
+• password (hashed)
 
-Developers Collection
+### Developers Collection
 
-user_id
-
-name
-
-bio
-
-skills
-
-experience_level
+• user_id
+• name
+• bio
+• skills
+• experience_level
 
 Each registered user is associated with a single developer profile.
 
-Author
+---
 
-Vrushank Saravade
+## 👨‍💻 Author
+
+**Vrushank Saravade**
+
+---
+
+
+
 
