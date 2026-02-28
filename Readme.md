@@ -1,42 +1,42 @@
-# 🚀 DevMatch v2 – Developer Profile Management API
+# 🚀 DevMatch v2 – Secure Developer Networking Backend
 
-DevMatch v2 is a secure, scalable RESTful backend API built to manage developer profiles with robust authentication and protected resource access.
+DevMatch v2 is a secure and scalable RESTful backend built to power developer networking platforms, collaboration systems, and recruitment solutions.
 
-The application enables users to register, authenticate, create and manage their developer profiles, and discover other developers through skill-based information stored in a MongoDB database.
+The platform enables users to register, authenticate securely, create professional developer profiles, and explore other developers based on skills and experience — all backed by MongoDB and JWT-based authentication.
 
-This project demonstrates real-world backend development using modern API design principles, JWT-based authentication, and NoSQL database integration.
+This project reflects production-oriented backend architecture using modern API standards, secure authentication mechanisms, and clean modular design.
 
 ---
 
-## ✨ Key Features
+## ✨ Core Features
 
-✔️ User Registration and Login
-✔️ Secure Password Hashing using Bcrypt
-✔️ JWT-based Authentication & Authorization
-✔️ Protected API Routes
-✔️ Create Developer Profiles
-✔️ View All Developer Profiles
-✔️ One-to-One Mapping between Users and Developer Profiles
-✔️ MongoDB Integration for Persistent Data Storage
-✔️ Interactive Swagger API Documentation
+✔️ Secure User Registration & Login
+✔️ Password Hashing with Bcrypt
+✔️ JWT-Based Authentication & Authorization
+✔️ Protected API Endpoints
+✔️ Create & Manage Developer Profiles
+✔️ Retrieve Developer Profiles (Authenticated Access)
+✔️ One-to-One Mapping Between Users and Developer Profiles
+✔️ MongoDB Persistent Storage
+✔️ Interactive Swagger Documentation
 
 ---
 
 ## 🛠️ Technology Stack
 
-| Technology | Purpose                   |
-| ---------- | ------------------------- |
-| Python     | Core Programming Language |
-| FastAPI    | Backend API Framework     |
-| MongoDB    | NoSQL Database            |
-| PyMongo    | Database Connector        |
-| JWT        | Authentication            |
-| Bcrypt     | Password Hashing          |
-| Uvicorn    | ASGI Server               |
+| Technology | Role                           |
+| ---------- | ------------------------------ |
+| Python     | Core Programming Language      |
+| FastAPI    | High-Performance API Framework |
+| MongoDB    | NoSQL Database                 |
+| PyMongo    | MongoDB Driver                 |
+| JWT        | Secure Authentication          |
+| Bcrypt     | Password Hashing               |
+| Uvicorn    | ASGI Server                    |
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Architecture
 
 devmatchv2/
 
@@ -65,7 +65,7 @@ devmatchv2/
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1️⃣ Clone Repository
 
 git clone https://github.com/YOUR_USERNAME/devmatchv2.git
 cd devmatchv2
@@ -96,39 +96,39 @@ ALGORITHM=HS256
 
 ---
 
-### 5️⃣ Run the Application
+### 5️⃣ Run the Server
 
 uvicorn app.main:app --reload
 
 ---
 
-## 📌 Access API Documentation
+## 📌 API Documentation
 
-After running the server, open:
+After starting the server, visit:
 
 http://127.0.0.1:8000/docs
 
-Swagger UI provides an interactive interface to test all API endpoints.
+Swagger UI allows interactive testing of all endpoints.
 
 ---
 
-## 🔐 Authentication Workflow
+## 🔐 Authentication Flow
 
-1. Register a new user via `/signup`
-2. Login using `/login`
-3. Obtain JWT Access Token
-4. Authorize API Requests using:
+1. Register using `/signup`
+2. Login via `/login`
+3. Receive JWT Access Token
+4. Authorize requests using:
 
 Bearer <access_token>
 
-5. Access Protected Endpoints:
+5. Access protected endpoints such as:
 
 • `/create-profile`
 • `/developers`
 
 ---
 
-## 🗄️ Database Schema
+## 🗄️ Database Design
 
 ### Users Collection
 
@@ -143,16 +143,26 @@ Bearer <access_token>
 • skills
 • experience_level
 
-Each registered user is associated with a single developer profile.
+Each user account is linked to exactly one developer profile.
+
+---
+
+## 🎯 Intended Use Cases
+
+• Developer Networking Platforms
+• Hiring & Recruitment Backends
+• Skill Discovery Systems
+• Collaboration Platforms
+• Portfolio Aggregation Services
 
 ---
 
 ## 👨‍💻 Author
 
-**Vrushank Saravade**
+Vrushank Saravade
 
 ---
 
 
 
-
+Built with performance, security, and scalability in mind.
